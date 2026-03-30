@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "learn-japanese"
+version = "1.0.0"
+description = "An interactive terminal game that teaches Japanese from beginner level — hiragana, katakana, greetings, numbers, food, daily life, travel, and culture."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "thorski1" }]
+keywords = [
+    "terminal", "game", "japanese", "language", "learning",
+    "hiragana", "katakana", "education", "cli",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Games/Entertainment :: Role-Playing",
+    "Topic :: Education",
+    "Topic :: Terminals",
+]
+dependencies = [
+    "rich>=13.0.0",
+    "quest-engine>=1.5.0",
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.20.0",
+    "jinja2>=3.0.0",
+    "python-multipart>=0.0.6",
+]
+
+[project.urls]
+Homepage      = "https://github.com/thorski1/learn-japanese"
+Repository    = "https://github.com/thorski1/learn-japanese"
+"Bug Tracker" = "https://github.com/thorski1/learn-japanese/issues"
+
+[project.scripts]
+learn-japanese         = "learn_japanese.main:main_japanese"
+hiragana-quest         = "learn_japanese.main:main_hiragana"
+katakana-quest         = "learn_japanese.main:main_katakana"
+greetings-jp-quest     = "learn_japanese.main:main_greetings_jp"
+numbers-jp-quest       = "learn_japanese.main:main_numbers_jp"
+food-jp-quest          = "learn_japanese.main:main_food_jp"
+daily-jp-quest         = "learn_japanese.main:main_daily_jp"
+travel-jp-quest        = "learn_japanese.main:main_travel_jp"
+culture-jp-quest       = "learn_japanese.main:main_culture_jp"
+
+[tool.setuptools.packages.find]
+where   = ["."]
+include = ["learn_japanese*"]
+
+[tool.setuptools.package-data]
+learn_japanese = ["skill-packs/**/*.py"]
