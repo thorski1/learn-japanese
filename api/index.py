@@ -23,7 +23,7 @@ os.environ.setdefault("QUEST_SKILL_PACKS_DIR", _PACKS_DIR)
 from engine.skill_pack import load_skill_pack  # noqa: E402
 
 _JAPANESE_PACKS = [
-    "hiragana", "katakana", "greetings_jp", "numbers_jp", "food_jp", "daily_jp", "travel_jp",
+    "hiragana", "katakana", "greetings_jp", "numbers_jp", "food_jp", "daily_jp", "travel_jp", "culture_jp",
 ]
 
 
