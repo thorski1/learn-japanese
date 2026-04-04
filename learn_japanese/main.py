@@ -28,7 +28,7 @@ _WEB = "--web" in sys.argv
 
 JAPANESE_PACKS = [
     "hiragana", "katakana", "greetings_jp", "numbers_jp",
-    "food_jp", "daily_jp", "travel_jp", "culture_jp", "colors_nature", "shopping_jp",
+    "food_jp", "daily_jp", "travel_jp", "culture_jp", "colors_nature", "shopping_jp", "directions_jp",
 ]
 
 
